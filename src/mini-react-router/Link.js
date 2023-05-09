@@ -6,7 +6,7 @@ export default function Link ({to, children}) {
 
     const navigate = useNavigate()
     console.log('navigate------',navigate)
-    debugger
+    
     const handle = (e) => {
         navigate(to)
     }
