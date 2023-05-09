@@ -14,11 +14,9 @@ export function useRoutes(routes){
 // 其实就是history 的createBrowserHistory方法返回的history对象中的push方法
 export function useNavigate() {
     console.log('NavigationContext',NavigationContext)
-    const res= useContext(NavigationContext);
-    console.log("res------",res)
     
-    // const { naviagtor } =  navigationContext
-    // return naviagtor.push;
+    const  naviagtor =  useContext(NavigationContext)?.naviagtor
+    return naviagtor?.push;
     
 }
  

@@ -14,9 +14,6 @@ export const createRoutesFromChildren = (children) =>{
 
         routes.push(route)
     })
-
-    console.log('routes',routes)
-    debugger
     //这里其实就是便利routes中的route元素  吧它便历程route对象数组
     return routes
 }

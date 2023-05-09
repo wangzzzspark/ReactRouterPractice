@@ -5,9 +5,10 @@ export default function Link ({to, children}) {
     console.log('children',children)
 
     const navigate = useNavigate()
-    // console.log('navigate------',navigate)
+    console.log('navigate------',navigate)
+    debugger
     const handle = (e) => {
-        // navigate(to)
+        navigate(to)
     }
     return (
         <a href={to} onClick={handle}>
