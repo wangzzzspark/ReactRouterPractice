@@ -1,10 +1,15 @@
-export const BrowserRouter = (parmas) => {
+import React, { useRef } from "react";
+import Router from "./Router";
+import { createBrowserHistory } from "history";
+export const BrowserRouter = ({ children }) => {
 
-    const children = parmas.children
-    //## question: 这里看看下parmas整体参数是啥?
-    // answer: params是一个对象，里面只有一个children属性
-    // 也就是说 函数组件中的Parmas里面参数就是它的子元素   clear
-    return children 
+    // 用useRef 保存createBrowserHistory的值 这样页面刷新数据就不会重新init赋值
+    let historyRef = useRef()
+    //ref对象只有一个current属性
+    if (historyRef.current?.createBrowserHistory == null) {
+        historyRef.current = createBrowserHistory()
+    }
+    const history = historyRef.current
+    return <Router  children={children}  navigator={history} />
 }
 
- 

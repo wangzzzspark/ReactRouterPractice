@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router,Routes,Route } from './mini-react-router/index'
+import { BrowserRouter as Router,Routes,Route,Link,useNavigate } from './mini-react-router/index'
 
 import User from "./pages/User.tsx";
 import Home from "./pages/Home.tsx";
@@ -9,6 +9,7 @@ function App() {
 
   return (
     <div className="App">
+     
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -16,6 +17,9 @@ function App() {
           <Route path="/user" element={<User />} />
         </Routes>
     </Router>
+    <div>
+        <Link to={'user'}>go to fucing user</Link>
+      </div>
     </div>
   );
 }
