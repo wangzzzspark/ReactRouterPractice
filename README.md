@@ -1,4 +1,4 @@
-# react-reouter-dom 
+# 1.section1  react-reouter-dom 
 首先 要明白是由js 原声的hash 或者 history 封装的 所以得先看这俩个api
 
 ## history 和hash 知识点
@@ -31,3 +31,15 @@ for example
 ## 问题 
 所以为什么大一点的项目需要用browerrouter 有什么好处？
 Link 和 NavLink 的区别是什么？
+
+# 2.section 2  my Router
+ 主要实现路由渲染 BroswerRouter通过context 传递共享history给所有的子路由 
+ 使用BrowserRouter 可以拿到他的children Routes 和 Routes所有的数组children Route
+ 在Routes中便利数组children，通过pathname 匹配路径 条件渲染
+
+ ## map 和forEach的区别
+ map 有返回值 根据条件return出来新的数组 但是forEach不会
+
+
+
+
