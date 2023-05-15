@@ -37,6 +37,7 @@ Link 和 NavLink 的区别是什么？
  使用BrowserRouter 可以拿到他的children Routes 和 Routes所有的数组children Route
  在Routes中便利数组children，通过pathname 匹配路径 条件渲染
 
+children的props.element可以直接渲染成dom 因为element就是import的组件通过props传递过来的  没毛病
  ## map 和forEach的区别
  map 有返回值 根据条件return出来新的数组 但是forEach不会
 
