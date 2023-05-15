@@ -41,6 +41,16 @@ children的props.element可以直接渲染成dom 因为element就是import的组
  ## map 和forEach的区别
  map 有返回值 根据条件return出来新的数组 但是forEach不会
 
+## 3.section 3 Navigation
+实现Link 组件和 useNavigat hook
+创建了router函数组件 接受了上级BrowserRouter 或者hash Router 用context传递过来的history 对象，其实本质就是从history里面选择哪个创建方式 createHashHistory  或者 createBowserHistory 亦或者memoryhistory ， 这样就可以用不同的路由模式
+
+这里注意  因为都是函数组件，所以每次重新加载的时候 ，都会重新调用函数，为了能保存新创建的history对象，或者navigatorContext 
+分别使用了useRef 和 useMemo 来保存
+
+
+问题1:  为什么用了 useRef之后函数组件重新重新执行，值也不会丢（因为存在react 链表里了？）
+问题2： 为什么有时候用useMemo 有时候用useRef ？了解他们的本质 使用方式等等
 
 
 

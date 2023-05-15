@@ -1,6 +1,6 @@
 import React from 'react';
 // import { BrowserRouter as Router, Routes, Route, Link, Outlet, useParams,useNavigate } from 'react-router-dom';
-import { BrowserRouter as Router, Routes, Route, Link} from './myRouter/index';
+import { BrowserRouter as Router, Routes, Route, Link } from './myRouter/index';
 
 
 
@@ -10,8 +10,12 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path='*' element={<>404</>} />
-          <Route path='deep' element={<Deep />} />
+          <Route path='/' element={<Layout />} >
+            <Route path='Product' element={<Product />} />
+            <Route path='deep' element={<Deep />} />
+            <Route path='home' element={<Home />} />
+          </Route>
+
         </Routes>
       </Router>
 
