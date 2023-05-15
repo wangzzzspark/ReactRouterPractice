@@ -52,5 +52,10 @@ children的props.element可以直接渲染成dom 因为element就是import的组
 问题1:  为什么用了 useRef之后函数组件重新重新执行，值也不会丢（因为存在react 链表里了？）
 问题2： 为什么有时候用useMemo 有时候用useRef ？了解他们的本质 使用方式等等
 
-
+## 4. section 4 实现路由渲染
+ 问题1: useEffect 和 useLayoutEffect的区别
+ 回答，最大的区别就是callback 函数的执行时间不一样  useEffect 是dom变更之后 延迟执行？
+ layout 是dom变更之后 立即执行  所以具体不同体现在哪里？
+ 再回答 ： 因为  为了locaiton 改变之后dom页面重新渲染 所以选择使用了setState 来更新页面， 我们使用了
+ history里面的listen函数 ，所以我们要在dom变更后立即执行
 
